@@ -1,0 +1,7 @@
+.DS_Store
+.idea/*
+*.log
+*.gz
+
+.gradle/
+/build/reports/problems/problems-report.html
