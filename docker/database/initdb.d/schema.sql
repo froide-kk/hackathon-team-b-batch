@@ -48,7 +48,7 @@ CREATE TABLE `member` (
   `slack_token` varchar(100) NOT NULL,
   `slack_expire` datetime NOT NULL,
   `notification_flag` tinyint(4) DEFAULT NULL,
-  `notification_time` datetime DEFAULT NULL,
+  `notification_time` String DEFAULT '09',
   `createdate` datetime NOT NULL,
   `updatedate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`oshiel_id`)

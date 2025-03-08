@@ -5,7 +5,6 @@ import lombok.Data;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
-
 import java.util.Date;
 
 /**
@@ -18,18 +17,22 @@ import java.util.Date;
 public class TopicEntity {
 
     /**
-     * oshiel会員ID
-     */
-    @Id
-    @Column(name = "oshiel_id")
-    private Integer oshielId;
-
-    /**
      * トピックID
      */
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "topic_id")
     private Integer topicId;
+
+    /**
+     * oshiel会員ID
+     */
+    @Column(name = "oshiel_id", insertable = false, updatable = false)
+    private Integer oshielId;
+
+    @ManyToOne
+    @JoinColumn(name = "oshiel_id", referencedColumnName = "oshiel_id")
+    private MemberEntity member;
 
     /**
      * トピック

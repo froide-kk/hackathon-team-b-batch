@@ -53,7 +53,7 @@ public class MemberEntity {
      * 通知時間
      */
     @Column(name = "notification_time")
-    private Date notificationTime;
+    private String notificationTime;
 
     /**
      * CREATE日時

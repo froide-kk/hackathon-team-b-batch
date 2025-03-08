@@ -6,3 +6,4 @@
 .gradle/
 /build/reports/problems/problems-report.html
 /docker/database/*
+/build/*

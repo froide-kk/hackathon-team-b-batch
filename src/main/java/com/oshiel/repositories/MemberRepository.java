@@ -14,8 +14,8 @@ import java.util.List;
 public interface MemberRepository extends JpaRepository<MemberEntity, Integer> {
 
     /**
-     * 通知フラグによる会員ID取得
+     * 通知フラグ かつ 現在時刻が配信時刻の会員一覧取得
      */
-    public List<MemberEntity> findByNotificationFlag(int flg);
+    public List<MemberEntity> findByNotificationFlagAndNotificationTime(int flg, String time);
 
 }
