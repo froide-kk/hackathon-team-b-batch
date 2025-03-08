@@ -1,0 +1,21 @@
+spring:
+  messages:
+    basename: i18n/application-messages
+    cache-duration: -1
+    encoding: UTF-8
+  datasource:
+    initialize: false
+    url: jdbc:mysql://localhost:3307/oshiel_db
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+slack:
+  client:
+    token: ${SLACK_BOT_TOKEN}
+    url:
+      dm: ${SLACK_DM_URL}
+      notification: ${SLACK_NOTIFICATION_URL}
+news:
+  api:
+    key: ${NEWS_API_KEY}
+    endpoint: ${NEWS_API_ENDPOINT}
